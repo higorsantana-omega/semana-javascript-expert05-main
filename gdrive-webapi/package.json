@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "start": "node src/index.js",
-    "test": "jest"
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --runInBand",
+    "test:watch": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --watch --runInBand",
+    "test:cov": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --no-cache --runInBand --coverage"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +17,7 @@
     "jest": "^27.1.1"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "pino": "6.8",
     "pino-pretty": "5.1",
     "socket.io": "4.1"
