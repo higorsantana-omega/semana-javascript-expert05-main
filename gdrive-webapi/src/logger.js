@@ -1,7 +1,7 @@
 import pino from "pino"
 const logger = pino({
-    prettryPrint: {
-        ignore: 'pid, hostname'
+    prettyPrint: {
+        ignore: 'pid,hostname'
     }
 })
 
